@@ -1,0 +1,21 @@
+{
+  "heading": "start.welcome",
+  "templatename": "questionnaire.style",
+  "metadata": {
+    "question": "start.how_do_you_rate",
+    "choices": [
+      {
+        "choice": "type.novice",
+        "directory": "novice"
+      },
+      {
+        "choice": "type.intermediate",
+        "directory": "intermediate"
+      },
+      {
+        "choice": "type.advance",
+        "directory": "advance"
+      }
+    ]
+  }
+}
