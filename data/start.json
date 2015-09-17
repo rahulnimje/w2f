@@ -1,20 +1,16 @@
 {
-  "heading": "start.welcome",
-  "templatename": "questionnaire.style",
+  "heading": "Survey",
+  "templatename": "surveyController",
   "metadata": {
-    "question": "start.how_do_you_rate",
+    "question": "Are you currently in business?",
     "choices": [
       {
-        "choice": "type.novice",
-        "directory": "novice"
+        "choice": "yes",
+        "directory": "has_business"
       },
       {
-        "choice": "type.intermediate",
-        "directory": "intermediate"
-      },
-      {
-        "choice": "type.advance",
-        "directory": "advance"
+        "choice": "no",
+        "directory": "has_no_business"
       }
     ]
   }
