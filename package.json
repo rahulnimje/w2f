@@ -13,6 +13,7 @@
     "construx": "^1.0.0",
     "construx-copier": "^1.0.0",
     "construx-dustjs": "^1.1.0",
+    "construx-less": "^1.0.0",
     "dust-makara-helpers": "^4.1.2",
     "express": "^4.12.2",
     "kraken-js": "^1.0.3",
