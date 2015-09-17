@@ -1,0 +1,25 @@
+{
+  "name": "work2future",
+  "version": "0.1.0",
+  "description": "work2future survey app",
+  "author": "Linh Ngo",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test",
+    "build": "grunt build",
+    "all": "npm run build && npm run test"
+  },
+  "dependencies": {
+    "construx": "^1.0.0",
+    "construx-copier": "^1.0.0",
+    "construx-dustjs": "^1.1.0",
+    "dust-makara-helpers": "^4.1.2",
+    "express": "^4.12.2",
+    "kraken-js": "^1.0.3",
+    "makara": "^2.0.3"
+  },
+  "devDependencies": {
+    "mocha": "^1.18.0",
+    "supertest": "^0.9.0"
+  }
+}
