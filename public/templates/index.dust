@@ -2,4 +2,10 @@
 
 {<body}
     <h1>{@pre type="content" key="greeting"/}</h1>
+    {metadata.question}<br>
+<form action="/nextSurvey">
+    {#metadata.choices}
+    <input type="submit" value="{jsonFile}" name="nextRoute">{choice}</input>
+    {/metadata.choices}
+    </form>
 {/body}

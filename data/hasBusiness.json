@@ -2,15 +2,15 @@
   "heading": "Survey",
   "templatename": "surveyController",
   "metadata": {
-    "question": "Are you currently in business?",
+    "question": "Do you have a business idea?",
     "choices": [
       {
         "choice": "yes",
-        "jsonFile": "hasBusiness.json"
+        "jsonFile": "hasBusinessIdea.json"
       },
       {
         "choice": "no",
-        "jsonFile": "hasNoBusiness.json"
+        "jsonFile": "hasNoBusinessIdea.json"
       }
     ]
   }

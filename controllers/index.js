@@ -1,6 +1,7 @@
 'use strict';
 
 var IndexModel = require('../models/index');
+var surveryData = require('../models/surveyData');
 
 
 module.exports = function (router) {
@@ -9,10 +10,27 @@ module.exports = function (router) {
 
     router.get('/', function (req, res) {
         
+       surveryData('start.json',function(err,survey){
+           console.log(JSON.stringify(survey));
+           res.render('index', survey);
+       });
+
+
         
-        res.render('index', model);
         
-        
+    });
+
+    router.get('/nextSurvey', function (req, res) {
+        console.log((req));
+        surveryData(req.query.nextRoute,function(err,survey){
+            console.log(req.params);
+            console.log(JSON.stringify(survey));
+            res.render('index', survey);
+        });
+
+
+
+
     });
 
 };
