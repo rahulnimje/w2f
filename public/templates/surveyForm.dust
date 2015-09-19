@@ -1,0 +1,14 @@
+{>"layouts/master" /}
+
+{<body}
+    {heading}<br>
+<form action="/createAccount" method="GET">
+ <input type="hidden" class="form-control" name="_csrf" value="{_csrf}">
+    {#metadata.formFields}
+        {fieldText}: <input type="{fieldType}" name="{fieldName}"><br>
+    {/metadata.formFields}
+        <!-- TODO: Change the line below to read jsonfile where action is create  -->
+         <input type="hidden" name="nextRoute" value="{metadata.actions[0].jsonFile}">
+         <input type="submit" value="Create">
+    </form>
+{/body}

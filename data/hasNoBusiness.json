@@ -1,6 +1,6 @@
 {
   "heading": "Survey",
-  "templatename": "surveyController",
+  "templateName": "surveyController",
   "metadata": {
     "question": "Do you have a business idea?",
     "choices": [
