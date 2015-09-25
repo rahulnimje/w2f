@@ -1,0 +1,15 @@
+
+    <div class="col-md-9">
+     <span id="question">	{metadata.question} </span>
+     <br>
+
+		
+    		{#metadata.choices}
+    		 <div class="col-md-1" >
+    		  <button type="submit" class="btn btn-primary response" value="{jsonFile}" name="nextRoute">{choice}</button>
+    		 </div>
+
+    		{/metadata.choices}
+
+    </div>
+    	

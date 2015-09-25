@@ -20,12 +20,25 @@ module.exports = function (router) {
         
     });
 
+     router.get('/toGetTheFirstQuestion', function (req, res) {
+        
+       surveryData('start.json',function(err,survey){
+           console.log(JSON.stringify(survey));
+           res.render('questionTemplate', survey);
+       });
+
+
+        
+        
+    });
+
     router.get('/nextSurvey', function (req, res) {
+
         console.log((req));
         surveryData(req.query.nextRoute,function(err,survey){
             console.log(req.params);
             console.log(JSON.stringify(survey));
-            res.render('index', survey);
+            res.render('questionTemplate', survey);
         });
 
 

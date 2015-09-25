@@ -1,11 +1,44 @@
 {>"layouts/master" /}
 
 {<body}
-    <h1>{@pre type="content" key="greeting"/}</h1>
-    {metadata.question}<br>
-<form action="/nextSurvey">
-    {#metadata.choices}
-    <input type="submit" value="{jsonFile}" name="nextRoute">{choice}</input>
-    {/metadata.choices}
-    </form>
+<div class="container-fluid">
+<div class="row">
+	<div class="col-md-3" style="border: 2px solid black; padding-top: 6px;">
+		<label class ="leftHeader"> Basic Contact Information </label>
+		<hr>
+		<label>  <span class="glyphicon glyphicon-ok" aria-hidden="true" style="display:none"></span> Evaluate Basic Needs Level </label>
+		<hr><label>   <span class="glyphicon glyphicon-ok" aria-hidden="true" style="display:none"></span>Intentify potential Mentees </label>
+		<hr><label> <span class="glyphicon glyphicon-ok" aria-hidden="true" style="display:none"></span> Consider financial needs </label>
+		<hr><label> <span class="glyphicon glyphicon-ok" aria-hidden="true" style="display:none"></span> Evaluate Location needs </label>
+		<hr>
+		<label>  <span class="glyphicon glyphicon-ok" aria-hidden="true" style="display:none"></span>Evaluate Employee needs </label>
+		<hr>
+		<label> <span class="glyphicon glyphicon-ok" aria-hidden="true" style="display:none"></span> Consider Marketing knowledge </label>
+		<hr>
+		<label> <span class="glyphicon glyphicon-ok" aria-hidden="true" style="display:none"></span> Corporate/Government procurement interest </label>
+		<hr>
+		<label> <span class="glyphicon glyphicon-ok" aria-hidden="true" style="display:none"></span> Import/Export interest</label>
+		<hr>
+		<label> <span class="glyphicon glyphicon-ok" aria-hidden="true" style="display:none"></span> Intentify Industry for specialized assistance or regulation</label>
+		<hr>
+		<label> <span class="glyphicon glyphicon-ok" aria-hidden="true" style="display:none"></span> Other Areas ? </label>
+		<hr>
+
+
+
+
+
+
+
+    
+	</div>
+    <div class="col-md-9" id="questionHolder" >
+    
+
+
+    
+    </div>
+</div>    
+
+</div>
 {/body}
