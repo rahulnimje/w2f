@@ -10,7 +10,7 @@ module.exports = function (router) {
     router.get('/survey', function (req, res) {
         
         
-        res.render('surveyController', model);
+       // res.render('surveyController', model);
         
         
     });

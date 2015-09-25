@@ -1,5 +1,13 @@
-{>"layouts/master" /}
+    <div class="col-md-9">
+     <span id="question">	{metadata.question} </span>
+     <br>
 
-{<body}
-    <h1>{@pre type="content" key="greeting"/}</h1>
-{/body}
+		
+    		{#metadata.choices}
+    		 <div class="col-md-1" >
+    		  <button type="submit" class="btn btn-primary response" value="{jsonFile}" name="nextRoute">{choice}</button>
+    		 </div>
+
+    		{/metadata.choices}
+
+    </div>

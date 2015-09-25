@@ -1,17 +1,12 @@
 {
   "heading": "Survey",
-  "templatename": "surveyController",
-  "metadata": {
-    "question": "Do you have a business idea?",
-    "choices": [
-      {
-        "choice": "yes",
-        "jsonFile": "hasBusinessIdea.json"
-      },
-      {
-        "choice": "no",
-        "jsonFile": "hasNoBusinessIdea.json"
-      }
-    ]
-  }
+  "templateName": "surveyResources",
+    "metadata": {
+      "resources": [
+        {"text": "BOS - how to develop a business idea; SCORE - Is owning a business right for you; FranNet",
+          "link": "http://www.paypal.com"},
+        {"text": "SBDC, SBDC Hispanic, MBDA, AnewAmerica - Planning and profit information",
+          "link": "http://www.yahoo.com"}
+      ]
+    }
 }

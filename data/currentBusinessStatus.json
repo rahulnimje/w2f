@@ -1,6 +1,8 @@
 {
   "heading": "Survey",
-  "templatename": "surveyController",
+  "tag": "basicInformation",
+  "tagText": "Basic Information",
+  "templateName": "surveyController",
   "metadata": {
     "question": "Are you currently in business?",
     "choices": [
