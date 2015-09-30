@@ -70,5 +70,12 @@
             }
         }
 
-    }
+    },
+
+	"dbconfig": {
+		"host": "10.24.80.84",
+		"user": "root",
+		"password": "YmFCh4sA4ADfKpDdbDERDN2ejcrt34zVAeP7",
+		"database": "work2futuredb"
+	}
 }
