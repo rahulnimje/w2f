@@ -1,15 +1,21 @@
+<div>
+    <div class="row questionTemplate">
+        <span id="question">	{metadata.question} </span>
+        <br>
 
-    <div class="col-md-9">
-     <span id="question">	{metadata.question} </span>
-     <br>
 
-		
     		{#metadata.choices}
-    		 <div class="col-md-1" >
-    		  <button type="submit" class="btn btn-primary response" value="{jsonFile}" name="nextRoute">{choice}</button>
-    		 </div>
+    		 <div class=" col-md-offset-1 col-md-1" >
+    		  <button type="submit" class="btn btn-primary response" value="{jsonFile}" name="nextRoute" data-id="{choice}">{choice}</button>
+
+    		  </div>
 
     		{/metadata.choices}
 
     </div>
+        <br>
+    <div class= "resultArrow row">
+    </div>
+</div>
+
     	

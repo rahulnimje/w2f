@@ -1,10 +1,10 @@
 {>"layouts/master" /}
 
 {<body}
-<div class="container-fluid">
+<div class="container-fluid" style="padding-top:5%;padding-left:5%;padding-bottom:5%;padding-right:5%;border: 2px solid black;margin:5px; border-radius:6px">
 <div class="row">
-	<div class="col-md-3" style="border: 2px solid black; padding-top: 6px;">
-		<label class ="leftHeader"> Basic Contact Information </label>
+	<div class="col-md-3" style="border: 1px solid black; padding-top: 6px; border-radius:6px">
+		<label> <span class="glyphicon glyphicon-ok" aria-hidden="true" style="display:none"></span>  Basic Contact Information </label>
 		<hr>
 		<label>  <span class="glyphicon glyphicon-ok" aria-hidden="true" style="display:none"></span> Evaluate Basic Needs Level </label>
 		<hr><label>   <span class="glyphicon glyphicon-ok" aria-hidden="true" style="display:none"></span>Intentify potential Mentees </label>
@@ -32,7 +32,7 @@
 
     
 	</div>
-    <div class="col-md-9" id="questionHolder" >
+    <div class="col-md-offset-1 col-md-8" id="questionHolder" style="border: 1px solid black;background-color:#ededed;padding-top:5%;padding-left:5%;padding-bottom:5%;padding-right:5%; border-radius:6px" >
     
 
 
@@ -41,4 +41,10 @@
 </div>    
 
 </div>
+   <script src="./components/jquery/dist/jquery.min.js"></script>
+    <script src="./components/bootstrap/dist/js/bootstrap.min.js"></script>
+                  <script src="./components/bootstrap/dist/js/bootstrap-arrows.js"></script>
+           <script src="./js/w2f.js"></script>
+
+
 {/body}
