@@ -23,7 +23,7 @@ module.exports = function (router) {
    //    });
    // });
 
-    router.get('/createAccount', function (req, res) {
+ /*   router.get('/createAccount', function (req, res) {
         //TODD: Save account information to database if action is create
         console.log("I am here");
         console.log(req.query.nextRoute);
@@ -35,8 +35,21 @@ module.exports = function (router) {
         });
 
 
-    });
+    });*/
 
+    router.post('/createAccount', function (req, res) {
+
+        surveryData(req.query.nextRoute,function(err,survey){
+            console.log(JSON.stringify(req.query));
+
+            // req.body will have all the form values. 
+            console.log(JSON.stringify(req.body));
+            res.render('questionTemplate', survey);
+        });
+
+
+
+    });
 
      router.get('/toGetTheFirstQuestion', function (req, res) {
         

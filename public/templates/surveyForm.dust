@@ -1,19 +1,23 @@
 
 
- <input type="hidden" class="form-control" name="_csrf" value="{_csrf}">
 
+
+<form id="createUser">
+<input type="hidden" class="form-control" name="_csrf" value="{_csrf}">
    {#metadata.formFields}
   <div  class = "form-group">
 
-                       <label for=" {fieldText}" class="col-md-3" style="display:inline-block"> {fieldText}:</label>
-                       <input type="text" class="form-control" id="{fieldText}" placeholder="{fieldText}" name="{fieldName}" style="display:inline-block" required/>
-                     </div>
+     <label for=" {fieldText}" class="col-md-3" style="display:inline-block"> {fieldText}:</label>
+     <input type="text" class="form-control" id="{fieldText}" placeholder="{fieldText}" name="{fieldName}" style="display:inline-block" required/>
+  </div>
 
 
     {/metadata.formFields}
+
         <!-- TODO: Change the line below to read jsonfile where action is create  -->
          <input type="hidden" name="nextRoute" value="{metadata.actions[0].jsonFile}">
 
-          <button type="submit" class="btn btn-primary" value="{metadata.actions[0].jsonFile}" name="nextRoute" id=create>Create</button>
+          <button type="submit" class="btn btn-primary" value="{metadata.actions[0].jsonFile}" name="nextRoute" id="create">Create</button>
   
 
+ </form>

@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba0e0c34-6100-4436-90d5-31e02868049c" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/public/templates/surveyController.dust" afterPath="$PROJECT_DIR$/public/templates/surveyController_1.dust" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/templates/index.dust" afterPath="$PROJECT_DIR$/public/templates/index.dust" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/templates/layouts/master.dust" afterPath="$PROJECT_DIR$/public/templates/layouts/master.dust" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/templates/questionTemplate.dust" afterPath="$PROJECT_DIR$/public/templates/questionTemplate.dust" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/index.js" afterPath="$PROJECT_DIR$/controllers/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/surveyController.js" afterPath="$PROJECT_DIR$/controllers/surveyController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/templates/surveyForm.dust" afterPath="$PROJECT_DIR$/public/templates/surveyForm.dust" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/w2f.iml" afterPath="$PROJECT_DIR$/.idea/w2f.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.build/js/w2f.js" afterPath="$PROJECT_DIR$/.build/js/w2f.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/w2f.js" afterPath="$PROJECT_DIR$/public/js/w2f.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="w2f.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,38 +28,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.dust" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/templates/index.dust">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="questionTemplate.dust" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/templates/questionTemplate.dust">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="surveyForm.dust" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/templates/surveyForm.dust">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+              <caret line="19" column="123" selection-start-line="19" selection-start-column="123" selection-end-line="19" selection-end-column="123" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="surveyResources.dust" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/templates/surveyResources.dust">
+      <file leaf-file-name="surveyController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/surveyController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controllers/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.24405506">
+              <caret line="44" column="55" selection-start-line="44" selection-start-column="55" selection-end-line="44" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -70,44 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="surveyController_1.dust" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/templates/surveyController_1.dust">
+      <file leaf-file-name="currentBusinessStatus.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/currentBusinessStatus.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="w2f.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/w2f.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.444445">
-              <caret line="27" column="142" selection-start-line="27" selection-start-column="142" selection-end-line="27" selection-end-column="142" />
-              <folding>
-                <marker date="1444151547000" expanded="true" signature="910:936" placeholder="..." />
-                <marker date="1444151547000" expanded="true" signature="1118:1144" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hasNoBusiness.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/hasNoBusiness.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hasNoBusinessIdea.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/hasNoBusinessIdea.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-11.25">
+              <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -123,8 +88,41 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="surveyResources.dust" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/templates/surveyResources.dust">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="noBusinessPlan.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/noBusinessPlan.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="w2f.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/w2f.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-20.25926">
+              <caret line="47" column="35" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="35" />
+              <folding>
+                <marker date="1444177401000" expanded="true" signature="910:936" placeholder="..." />
+                <marker date="1444177401000" expanded="true" signature="1118:1144" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="surveyController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/surveyController.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -143,10 +141,12 @@
       <list>
         <option value="$PROJECT_DIR$/public/templates/surveyController.dust" />
         <option value="$PROJECT_DIR$/public/templates/layouts/master.dust" />
-        <option value="$PROJECT_DIR$/public/js/w2f.js" />
-        <option value="$PROJECT_DIR$/public/templates/surveyForm.dust" />
         <option value="$PROJECT_DIR$/public/templates/index.dust" />
         <option value="$PROJECT_DIR$/public/templates/questionTemplate.dust" />
+        <option value="$PROJECT_DIR$/controllers/surveyController.js" />
+        <option value="$PROJECT_DIR$/public/js/w2f.js" />
+        <option value="$PROJECT_DIR$/public/templates/surveyForm.dust" />
+        <option value="$PROJECT_DIR$/controllers/index.js" />
       </list>
     </option>
   </component>
@@ -504,20 +504,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/surveyController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/surveyController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -533,10 +519,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/currentBusinessStatus.json">
+    <entry file="file://$PROJECT_DIR$/data/hasNoBusiness.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/templates/surveyController_1.dust">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/templates/questionTemplate.dust">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/templates/index.dust">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -550,14 +560,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/hasBusinessIdea.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/hasNoBusiness.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -589,22 +591,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/surveyController_1.dust">
+    <entry file="file://$PROJECT_DIR$/data/currentBusinessStatus.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
+        <state vertical-scroll-proportion="-11.25">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/w2f.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.444445">
-          <caret line="27" column="142" selection-start-line="27" selection-start-column="142" selection-end-line="27" selection-end-column="142" />
-          <folding>
-            <marker date="1444151547000" expanded="true" signature="910:936" placeholder="..." />
-            <marker date="1444151547000" expanded="true" signature="1118:1144" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -619,23 +610,50 @@
     <entry file="file://$PROJECT_DIR$/public/templates/surveyForm.dust">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+          <caret line="19" column="123" selection-start-line="19" selection-start-column="123" selection-end-line="19" selection-end-column="123" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/index.dust">
+    <entry file="file://$PROJECT_DIR$/public/js/w2f.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-          <folding />
+        <state vertical-scroll-proportion="-20.25926">
+          <caret line="47" column="35" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="35" />
+          <folding>
+            <marker date="1444177401000" expanded="true" signature="910:936" placeholder="..." />
+            <marker date="1444177401000" expanded="true" signature="1118:1144" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/templates/questionTemplate.dust">
+    <entry file="file://$PROJECT_DIR$/models/surveyController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/surveyController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24405506">
+          <caret line="44" column="55" selection-start-line="44" selection-start-column="55" selection-end-line="44" selection-end-column="55" />
           <folding />
         </state>
       </provider>

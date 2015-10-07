@@ -51,7 +51,9 @@ console.log("called called");
 		console.log(this.value);
 
 		$.ajax({
-			url:"/nextSurvey?nextRoute="+ this.value,
+			type:"POST",
+			url:"/createAccount?nextRoute="+ this.value,
+			data:$("#createUser").serialize(),
 			success:function(result){
 				//alert("success");
 				$("#questionHolder").html("");
@@ -63,7 +65,6 @@ console.log("called called");
 			}
 		});
 
-
+		return false;
 	});
-
 });
