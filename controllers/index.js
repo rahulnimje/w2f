@@ -81,14 +81,14 @@ module.exports = function (router) {
 
     router.get('/nextSurvey', function (req, res) {
 
-        console.log((req));
         surveryData(req.query.nextRoute,function(err,survey){
-            console.log(req.params);
-            console.log(JSON.stringify(survey));
 
+        if(survey.templateName==="surveyResources")
+        {
+            res.render('surveyResources', survey);
+        }else {
             res.render('questionTemplate', survey);
-
-          //  res.render(survey.templateName, survey);
+        }
 
         });
     });

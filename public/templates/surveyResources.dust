@@ -1,11 +1,12 @@
 
-    <h1>{@pre type="content" key="greeting"/}</h1>
-    {metadata.question}<br>
-<form action="/nextSurvey">
-    {#metadata.resources}
+  <div>
+<h3 > Please check out the following resources : </h3>
+
+    {#metadata.information}
         <a href = "{link}" target="_blank">{text}</a><br>
-    {/metadata.resources}
-    </form>
+
+    {/metadata.information}
+  </div>
 
 
 

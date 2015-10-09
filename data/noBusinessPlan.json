@@ -3,7 +3,14 @@
   "templateName": "surveyResources",
   "metadata": {
     "information": [
-      "BOS - how to develop a business idea; SCORE - Is owning a business right for you; FranNet",
-      "SBDC, SBDC Hispanic, MBDA, AnewAmerica - Planning and profit information"]
+      {
+        "link":"BOS - how to develop a business idea; SCORE - Is owning a business right for you; FranNet",
+        "text":"www.paypal.com"
+      },
+      {
+        "link":"www.google.com",
+        "text":"Google"
+      }
+     ]
   }
 }
