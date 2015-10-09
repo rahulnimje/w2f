@@ -2,19 +2,39 @@
 
 
 
-<form id="createUser">
+<form id="createUser" class = "form-horizontal">
 <input type="hidden" class="form-control" name="_csrf" value="{_csrf}">
-   {#metadata.formFields}
   <div  class = "form-group">
 
-     <label for=" {fieldText}" class="col-md-3" style="display:inline-block"> {fieldText}:</label>
-     <input type="text" class="form-control" id="{fieldText}" placeholder="{fieldText}" name="{fieldName}" style="display:inline-block" required/>
+     <label class="col-md-3" style="display:inline"> First Name: </label>
+     <input type="text" class="form-control" placeholder="First Name" name="firstName" style="display:inline" required/>
+  </div>
+  <div  class = "form-group">
+
+     <label class="col-md-3" style="display:inline-block"> Last Name:</label>
+     <input type="text" class="form-control"  placeholder="Last Name" name="lastName" style="display:inline-block" required/>
+  </div>
+  <div  class = "form-group">
+
+       <label class="col-md-3" style="display:inline-block"> Email:</label>
+       <input type="text" class="form-control" placeholder="Email" name="email" style="display:inline-block" required/>
+  </div>
+  <div  class = "form-group">
+
+         <label class="col-md-3" style="display:inline-block"> Password:</label>
+         <input type="password" class="form-control" placeholder="Password" name="password" style="display:inline-block" required/>
+  </div>
+  <div  class = "form-group">
+
+           <label class="col-md-3" for="language" style="display:inline-block"> Language:</label>
+           <select class="form-control"id = "language" name="{language}" required>
+            <option>English</option>
+            <option>Spanish</option>
+            <option>Vietnamese</option>
+            </select>
   </div>
 
-
-    {/metadata.formFields}
-
-        <!-- TODO: Change the line below to read jsonfile where action is create  -->
+         <!-- TODO: Change the line below to read jsonfile where action is create  -->
          <input type="hidden" name="nextRoute" value="{metadata.actions[0].jsonFile}">
 
           <button type="submit" class="btn btn-primary" value="{metadata.actions[0].jsonFile}" name="nextRoute" id="create">Create</button>

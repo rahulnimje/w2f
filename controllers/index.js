@@ -2,6 +2,7 @@
 
 var IndexModel = require('../models/index');
 var surveryData = require('../models/surveyData');
+var accountDAO = require ('../lib/accountDAO');
 
 
 module.exports = function (router) {
@@ -44,12 +45,22 @@ module.exports = function (router) {
 
             // req.body will have all the form values. 
             console.log(JSON.stringify(req.body));
+            //console.log(req.body.firstName);
+            var new_account = { first_name: req.body.firstName, last_name: req.body.lastName, password: req.body.password,
+                'email': req.body.email, language: 'en_US'  };
+            var new_account_number = accountDAO.createAccount(new_account,returnResult);
+            console.log('new account number is: ', new_account_number);
+
             res.render('questionTemplate', survey);
         });
 
 
 
     });
+    var returnResult = function(err,response){
+      console.log(response);
+
+    }
 
      router.get('/toGetTheFirstQuestion', function (req, res) {
         
