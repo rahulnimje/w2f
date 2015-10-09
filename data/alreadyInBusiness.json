@@ -1,0 +1,18 @@
+{
+  "uniqueTag": "alreadyInBusiness",
+  "area": "Evaluate Basic Needs Level",
+  "templateName": "surveyController",
+  "metadata": {
+    "question": "Are you happy with the current performance of your business?",
+    "actions": [
+      {
+        "action": "yes",
+        "nextTag": "endOfSurvey.json"
+      },
+      {
+        "action": "no",
+        "nextTag": "notSatisfiedWithBusiness.json"
+      }
+    ]
+  }
+}

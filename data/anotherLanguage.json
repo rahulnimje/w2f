@@ -1,0 +1,18 @@
+{
+  "uniqueTag": "anotherLanguage",
+  "area": "Evaluate Basic Needs Level",
+  "templateName": "surveyController",
+  "metadata": {
+    "question": "Do you want help in another language?",
+    "actions": [
+      {
+        "action": "yes",
+        "nextTag": "anotherLanguageInfo.json"
+      },
+      {
+        "action": "no",
+        "nextTag": "isWomanOwned.json"
+      }
+    ]
+  }
+}

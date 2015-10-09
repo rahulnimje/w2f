@@ -1,0 +1,19 @@
+{
+  "uniqueTag": "reviewOperations",
+  "area": "Evaluate Basic Needs Level",
+  "templateName": "surveyController",
+  "metadata": {
+    "question": "Do you want help to review your operations (profit level, cost containment, customer satisfaction, etc)?",
+    "actions": [
+      {
+        "action": "yes",
+        "nextTag": "operationsInfo.json"
+      },
+      {
+        "action": "no",
+        "nextTag": "operationsInfo.json"
+      }
+    ]
+  }
+}
+

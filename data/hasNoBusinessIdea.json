@@ -1,12 +1,17 @@
 {
-  "heading": "Survey",
+  "uniqueTag": "hasNoBusinessIdea",
+  "area": "Evaluate Basic Needs Level",
   "templateName": "surveyResources",
-    "metadata": {
-      "resources": [
-        {"text": "BOS - how to develop a business idea; SCORE - Is owning a business right for you; FranNet",
-          "link": "http://www.paypal.com"},
-        {"text": "SBDC, SBDC Hispanic, MBDA, AnewAmerica - Planning and profit information",
-          "link": "http://www.yahoo.com"}
-      ]
-    }
+  "metadata": {
+    "resources": [
+      {
+      "text":"BOS - how to develop a business idea; SCORE - Is owning a business right for you; FranNet",
+        "link":"https://www.paypal.com"
+      },
+      {
+        "text":"Google",
+         "link":"www.google.com"
+      }
+    ]
+  }
 }

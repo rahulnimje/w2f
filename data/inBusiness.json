@@ -1,0 +1,18 @@
+{
+  "uniqueTag": "inBusiness",
+  "area": "Evaluate Basic Needs Level",
+  "templateName": "surveyController",
+  "metadata": {
+    "question": "Are you currently in business?",
+    "actions": [
+      {
+        "action": "yes",
+        "nextTag": "alreadyInBusiness"
+      },
+      {
+        "action": "no",
+        "nextTag": "notYetInBusiness"
+      }
+    ]
+  }
+}

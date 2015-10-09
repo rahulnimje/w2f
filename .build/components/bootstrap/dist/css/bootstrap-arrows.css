@@ -6,10 +6,10 @@
 .arrow-warning{background-position:-345px -44px;}
 .arrow-danger{background-position:-430px -44px;}
 .arrow-inverse{background-position:-515px -44px;}
-.arrow-large{height:91px;width:46px;background-position:-45px -8px;}
-.arrow-primary-large{height:91px;width:46px;background-position:-130px -8px;}
-.arrow-info-large{height:91px;width:46px;background-position:-215px -8px;}
-.arrow-success-large{height:91px;width:46px;background-position:-300px -8px;}
-.arrow-warning-large{height:91px;width:46px;background-position:-384px -8px;}
-.arrow-danger-large{height:91px;width:46px;background-position:-469px -8px;}
-.arrow-inverse-large{height:91px;width:46px;background-position:-554px -8px;}
+.arrow-large{height:50px;width:46px;background-position:-45px -8px;}
+.arrow-primary-large{height:50px;width:46px;background-position:-130px -8px;}
+.arrow-info-large{height:50px;width:46px;background-position:-215px -8px;}
+.arrow-success-large{height:50px;width:46px;background-position:-300px -8px;}
+.arrow-warning-large{height:50px;width:46px;background-position:-384px -8px;}
+.arrow-danger-large{height:50px;width:46px;background-position:-469px -8px;}
+.arrow-inverse-large{height:50px;width:46px;background-position:-554px -8px;}

@@ -1,17 +1,23 @@
 {
-  "heading": "Survey",
+  "uniqueTag": "hasBusinessIdea",
+  "area": "Evaluate Basic Needs Level",
   "templateName": "surveyController",
   "metadata": {
     "question": "Do you have a detailed business plan that shows how you'll make sufficient profit to achieve your financial goals?",
-    "choices": [
+    "actions": [
       {
-        "choice": "yes",
-        "jsonFile": "hasBusinessPlan.json"
+        "action": "yes",
+        "nextTag": "notSatisfiedWithBusiness.json"
       },
       {
-        "choice": "no",
-        "jsonFile": "noBusinessPlan.json"
+        "action": "no",
+        "nextTag": "hasNoBusinessPlan.json"
       }
     ]
   }
 }
+
+
+
+
+

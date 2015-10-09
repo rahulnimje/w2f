@@ -1,0 +1,17 @@
+{
+	"uniqueTag":"hasNoBusinessPlan",
+ "area": "Evaluate Basic Needs Level",
+  "templateName": "surveyResources",
+  "metadata": {
+    "resources": [
+      {
+      "text":"SBDC, SBDC Hispanic, MBDA, AnewAmerica - Planning and profit information",
+        "link":"https://www.paypal.com"
+      },
+      {
+        "text":"Google",
+        "link":"https://www.google.com"
+      }
+    ]
+  }
+}

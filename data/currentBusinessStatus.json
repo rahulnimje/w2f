@@ -1,19 +1,23 @@
 {
-  "heading": "Survey",
-  "tag": "basicInformation",
-  "tagText": "Basic Information",
-  "templateName": "surveyController",
+   "uniqueTag":"currentBusinessStatus",
+   "area":"Evaluate Basic Needs Level",
+   "templateName":"surveyController",
   "metadata": {
     "question": "Are you currently in business?",
-    "choices": [
+    "actions": [
       {
-        "choice": "yes",
-        "jsonFile": "hasBusiness.json"
+        "action": "yes",
+        "nextTag": "alreadyInBusiness.json"
       },
       {
-        "choice": "no",
-        "jsonFile": "hasNoBusiness.json"
+        "action": "no",
+        "nextTag": "notYetInBusiness.json"
       }
     ]
   }
 }
+
+
+
+
+

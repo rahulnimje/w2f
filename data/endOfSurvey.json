@@ -1,0 +1,15 @@
+
+ {
+  "uniqueTag": "endOfSurvey",
+  "area": "Evaluate Basic Needs Level",
+  "templateName": "surveyResources",
+  "metadata": {
+    "resources": [
+      {
+        "text":"THANK YOU for Taking the survey",
+        "link":"www.paypal.com"
+      }
+
+    ]
+  }
+}

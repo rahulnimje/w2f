@@ -1,0 +1,18 @@
+{
+  "uniqueTag": "isMinorityOwned",
+  "area": "Evaluate Basic Needs Level",
+  "templateName": "surveyController",
+  "metadata": {
+    "question": "Is the company minority owned?",
+    "actions": [
+      {
+        "action": "yes",
+        "nextTag": "minorityOwnedInfo.json"
+      },
+      {
+        "action": "no",
+        "nextTag": "isVeteranOwned.json"
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "uniqueTag": "notSatisfiedWithBusiness",
+  "area": "Evaluate Basic Needs Level",
+  "templateName": "surveyController",
+  "metadata": {
+    "question": "Special conditions for basic assistance :- Do you want to evaluate your personal attributes?",
+    "actions": [
+      {
+        "action": "yes",
+        "nextTag": "anotherLanguage.json"
+      },
+      {
+        "action": "no",
+        "nextTag": "endOfSurvey.json"
+      }
+    ]
+  }
+}

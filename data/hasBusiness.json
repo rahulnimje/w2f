@@ -1,16 +1,17 @@
 {
-  "heading": "Survey",
-  "templateName": "surveyController",
+     "uniqueTag":"hasBusiness",
+    "area":"Evaluate Basic Needs Level",
+   "templateName":"surveyController",
   "metadata": {
     "question": "Do you have a business idea?",
-    "choices": [
+    "actions": [
       {
-        "choice": "yes",
-        "jsonFile": "hasBusinessIdea.json"
+        "action": "yes",
+        "nextTag": "hasBusinessIdea.json"
       },
       {
-        "choice": "no",
-        "jsonFile": "hasNoBusinessIdea.json"
+        "action": "no",
+        "nextTag": "hasNoBusinessIdea.json"
       }
     ]
   }

@@ -1,0 +1,13 @@
+{
+  "uniqueTag": "veteranOwnedInfo",
+  "area": "Evaluate Basic Needs Level",
+  "templateName": "surveyResources",
+  "metadata": {
+    "resources": [
+     {
+      "text":"PARTNER?",
+        "link":"https://www.paypal.com"
+      }
+    ]
+  }
+}
