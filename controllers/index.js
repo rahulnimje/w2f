@@ -24,18 +24,17 @@ module.exports = function (router) {
 		var new_account = { first_name: req.body.firstName, last_name: req.body.lastName, password: req.body.password,
 			'email': req.body.email, language: 'en'  };
 
-		var new_account_number = accountDAO.createAccount(new_account, returnResult);
+		accountDAO.createAccount(new_account, function (return_code, new_account_number) {
+			console.log('new account number is: ', new_account_number);
+			// gather the metadata for the frontend
+			var survey = surveyData.get(req.query.nextRoute);
 
-		// console.log('new account number is: ', new_account_number);
+			// also gather the language and account number for the frontend.
+			survey['language'] = language;
+			survey['account_number'] = new_account_number;
 
-		// gather the metadata for the frontend
-		var survey = surveyData.get(req.query.nextRoute);
-
-		// also gather the language and account number for the frontend.
-		survey['language'] = language;
-		survey['account_number'] = new_account_number;
-
-		res.render('questionTemplate', survey);
+			res.render('questionTemplate', survey);
+		});
 
 	});
 
