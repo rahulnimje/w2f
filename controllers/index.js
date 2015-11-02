@@ -1,10 +1,10 @@
 'use strict';
 
 var IndexModel = require('../models/index');
-var surveryData = require('../models/surveyData');
 var accountDAO = require('../lib/accountDAO');
 var accountpropertiesDAO = require('../lib/accountpropertiesDAO');
 var surveyData = require('../lib/surveyData');
+var surveyForm = require('../lib/surveyForm');
 
 module.exports = function (router) {
 
@@ -45,20 +45,19 @@ module.exports = function (router) {
 	}
 
 	router.get('/toGetTheFirstQuestion', function (req, res) {
-		// console.log("/toGetTheFirstQuestion is called");
+		console.log("/toGetTheFirstQuestion is called");
 
 		var language = req.body.language || 'en';
 		var account_number = req.body.account_number;
 
 		// TODO:  if account_number is null or 0, error log
+		var survey = surveyForm.get('basicContactInfo');
 
-		surveryData('newAccount.json', function (err, survey) {
-			// also gather the language and account number for the frontend.
-			survey['language'] = language;
-			survey['account_number'] = account_number;
+		// also gather the language and account number for the frontend.
+		survey['language'] = language;
+		survey['account_number'] = account_number;
 
-			res.render(survey.templateName, survey);
-		});
+		res.render(survey.templateName, survey);
 
 
 	});
@@ -66,7 +65,7 @@ module.exports = function (router) {
 
 	router.get('/nextSurvey', function (req, res) {
 		// console.log("/nextSurvey is called");
-		console.log('req.body is ', req.body);
+		// console.log('req.body is ', req.body);
 
 		var language = req.body.language || 'en';
 		var account_number = req.body.account_number;
@@ -80,10 +79,10 @@ module.exports = function (router) {
 		survey['language'] = language;
 		survey['account_number'] = account_number;
 
-		console.log('req.query', req.query);
+		// console.log('req.query', req.query);
 		var new_account_properties = {
 			account_number: account_number,
-			name: req.query.name || 'UNKNOWN',
+			name: req.query.name || 'UNKNOWN',  // preferably not a query, but in req.body
 			value: req.query.value || 'UNKNOWN'
 		}
 

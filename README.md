@@ -4,6 +4,9 @@ work2future
 work2future survey app
 Developed by PayPal for Small Business Challenge
 
+If running the server for the first, install the dependent node_modules:
+npm install
+
 To start the server:
 npm start
 or
@@ -17,13 +20,13 @@ config/config.json
 
 Database schema:
 CREATE TABLE `account` (
+  `account_number` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `first_name` varchar(64) DEFAULT '',
   `last_name` varchar(64) DEFAULT '',
   `email` varchar(127) NOT NULL DEFAULT '',
   `language` varchar(5) DEFAULT '',
-  `account_number` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   UNIQUE KEY `account_number` (`account_number`)
-) ENGINE=InnoDB AUTO_INCREMENT=180 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 CREATE TABLE `accountproperties` (
   `account_number` bigint(20) unsigned NOT NULL,
@@ -31,3 +34,4 @@ CREATE TABLE `accountproperties` (
   `value` varchar(64) NOT NULL DEFAULT '',
   PRIMARY KEY (`account_number`,`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
