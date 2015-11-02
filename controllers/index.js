@@ -33,6 +33,8 @@ module.exports = function (router) {
 			// also gather the language and account number for the frontend.
 			survey['language'] = language;
 			survey['account_number'] = new_account_number;
+			survey['all_unique_tags'] = surveyData.getAllTags();
+			// console.log(survey);
 
 			res.render('questionTemplate', survey);
 		});
@@ -56,7 +58,8 @@ module.exports = function (router) {
 		// also gather the language and account number for the frontend.
 		survey['language'] = language;
 		survey['account_number'] = account_number;
-
+		survey['all_unique_tags'] = surveyData.getAllTags();
+		console.log(survey);
 		res.render(survey.templateName, survey);
 
 
@@ -78,6 +81,9 @@ module.exports = function (router) {
 		// also gather the language and account number for the frontend.
 		survey['language'] = language;
 		survey['account_number'] = account_number;
+		survey['all_unique_tags'] = surveyData.getAllTags();
+
+		console.log(survey);
 
 		// console.log('req.query', req.query);
 		var new_account_properties = {
