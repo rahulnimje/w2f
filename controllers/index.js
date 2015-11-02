@@ -11,51 +11,31 @@ module.exports = function (router) {
 
 	router.get('/', function (req, res) {
 		res.render('index');
-
-
-		/*     surveryData('newAccount.json',function(err,survey){
-		 console.log(JSON.stringify(survey));
-		 res.render(survey.templateName, survey);
-		 });*/
 	});
 
-	//    surveryData('currentBusinessStatus.json',function(err,survey){
-	//        console.log(JSON.stringify(survey));
-	//        res.render(survey.templateName, survey);
-	//    });
-	// });
-
-	/*   router.get('/createAccount', function (req, res) {
-	 //TODD: Save account information to database if action is create
-	 console.log("I am here");
-	 console.log(req.query.nextRoute);
-	 console.log((req));
-	 surveryData(req.query.nextRoute,function(err,survey){
-	 console.log(req.params);
-	 console.log(JSON.stringify(survey));
-	 res.render(survey.templateName, survey);
-	 });
-
-
-	 });*/
 	router.post('/createAccount', function (req, res) {
 
-			// console.log(JSON.stringify(req.query));
+		// console.log("/createAccount is called");
 
-			// req.body will have all the form values.
-			// console.log(JSON.stringify(req.body));
-			var language = req.body.language || 'en';
+		// req.body will have all the form values.
+		// console.log(JSON.stringify(req.body));
+		var language = req.body.language || 'en';
 
-			var new_account = { first_name: req.body.firstName, last_name: req.body.lastName, password: req.body.password,
-				'email': req.body.email, language: 'en'  };
-			var new_account_number = accountDAO.createAccount(new_account, returnResult);
+		var new_account = { first_name: req.body.firstName, last_name: req.body.lastName, password: req.body.password,
+			'email': req.body.email, language: 'en'  };
 
-			// console.log('new account number is: ', new_account_number);
+		var new_account_number = accountDAO.createAccount(new_account, returnResult);
 
-			var survey = surveyData.get(req.query.nextRoute);
-			survey['language'] = language;
+		// console.log('new account number is: ', new_account_number);
 
-			res.render('questionTemplate', survey);
+		// gather the metadata for the frontend
+		var survey = surveyData.get(req.query.nextRoute);
+
+		// also gather the language and account number for the frontend.
+		survey['language'] = language;
+		survey['account_number'] = new_account_number;
+
+		res.render('questionTemplate', survey);
 
 	});
 
@@ -65,10 +45,18 @@ module.exports = function (router) {
 	}
 
 	router.get('/toGetTheFirstQuestion', function (req, res) {
+		// console.log("/toGetTheFirstQuestion is called");
+
 		var language = req.body.language || 'en';
+		var account_number = req.body.account_number;
+
+		// TODO:  if account_number is null or 0, error log
 
 		surveryData('newAccount.json', function (err, survey) {
+			// also gather the language and account number for the frontend.
 			survey['language'] = language;
+			survey['account_number'] = account_number;
+
 			res.render(survey.templateName, survey);
 		});
 
@@ -77,13 +65,19 @@ module.exports = function (router) {
 
 
 	router.get('/nextSurvey', function (req, res) {
+		// console.log("/nextSurvey is called");
 
 		var language = req.body.language || 'en';
+		var account_number = req.body.account_number;
 
-		//console.log('nextroute is ' + req.query.nextRoute);
+		// TODO:  if account_number is null or 0, error log
+
+		// gather the metadata for the frontend
 		var survey = surveyData.get(req.query.nextRoute);
+
+		// also gather the language and account number for the frontend.
 		survey['language'] = language;
-		// console.log('survey is ' + survey);
+		survey['account_number'] = account_number;
 
 		if (survey.templateName === "surveyResources") {
 			res.render('surveyResources', survey);
