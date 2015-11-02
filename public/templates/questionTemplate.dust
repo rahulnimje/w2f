@@ -1,16 +1,16 @@
 <div>
     <div class="row questionTemplate">
-        <span id="question">	{metadata.question} </span>
+        <span id="question">    {metadata.question.en} </span>
         <br>
 
 
-    		{#metadata.choices}
-    		 <div class=" col-md-offset-1 col-md-1" >
-    		  <button type="submit" class="btn btn-primary response" value="{jsonFile}" name="nextRoute" data-id="{choice}">{choice}</button>
+            {#metadata.actions}
+             <div class=" col-md-offset-1 col-md-1" >
+              <button type="submit" class="btn btn-primary response" value="{nextTag}" name="nextRoute" data-id="{action}">{action.en}</button>
 
-    		  </div>
+              </div>
 
-    		{/metadata.choices}
+            {/metadata.actions}
 
     </div>
         <br>
@@ -18,4 +18,4 @@
     </div>
 </div>
 
-    	
+        

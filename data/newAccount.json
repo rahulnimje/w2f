@@ -48,12 +48,12 @@
       {
         "action": "Create",
         "uri": "createAccount",
-        "jsonFile": "currentBusinessStatus.json"
+        "jsonFile": "currentBusinessStatus"
       },
       {
         "action": "Skip",
         "uri": "skipAccount",
-        "jsonFile": "currentBusinessStatus.json"
+        "jsonFile": "currentBusinessStatus"
       }
       ]
   }

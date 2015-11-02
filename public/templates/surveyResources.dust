@@ -2,10 +2,10 @@
   <div>
 <h3 > Please check out the following resources : </h3>
 
-    {#metadata.information}
+    {#metadata.resources}
         <a href = "{link}" target="_blank">{text}</a><br>
 
-    {/metadata.information}
+    {/metadata.resources}
   </div>
 
 
