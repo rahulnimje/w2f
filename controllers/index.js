@@ -3,6 +3,7 @@
 var IndexModel = require('../models/index');
 var surveryData = require('../models/surveyData');
 var accountDAO = require('../lib/accountDAO');
+var accountpropertiesDAO = require('../lib/accountpropertiesDAO');
 var surveyData = require('../lib/surveyData');
 
 module.exports = function (router) {
@@ -65,6 +66,7 @@ module.exports = function (router) {
 
 	router.get('/nextSurvey', function (req, res) {
 		// console.log("/nextSurvey is called");
+		console.log('req.body is ', req.body);
 
 		var language = req.body.language || 'en';
 		var account_number = req.body.account_number;
@@ -78,11 +80,21 @@ module.exports = function (router) {
 		survey['language'] = language;
 		survey['account_number'] = account_number;
 
-		if (survey.templateName === "surveyResources") {
-			res.render('surveyResources', survey);
-		} else {
-			res.render('questionTemplate', survey);
+		console.log('req.query', req.query);
+		var new_account_properties = {
+			account_number: account_number,
+			name: req.query.name || 'UNKNOWN',
+			value: req.query.value || 'UNKNOWN'
 		}
+
+		accountpropertiesDAO.createAccountProperties(new_account_properties, function (return_code) {
+
+			if (survey.templateName === "surveyResources") {
+				res.render('surveyResources', survey);
+			} else {
+				res.render('questionTemplate', survey);
+			}
+		});
 
 	});
 

@@ -15,3 +15,19 @@ http://localhost:8000
 Database credential is stored in:
 config/config.json
 
+Database schema:
+CREATE TABLE `account` (
+  `first_name` varchar(64) DEFAULT '',
+  `last_name` varchar(64) DEFAULT '',
+  `email` varchar(127) NOT NULL DEFAULT '',
+  `language` varchar(5) DEFAULT '',
+  `account_number` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  UNIQUE KEY `account_number` (`account_number`)
+) ENGINE=InnoDB AUTO_INCREMENT=180 DEFAULT CHARSET=latin1;
+
+CREATE TABLE `accountproperties` (
+  `account_number` bigint(20) unsigned NOT NULL,
+  `name` varchar(64) NOT NULL DEFAULT '',
+  `value` varchar(64) NOT NULL DEFAULT '',
+  PRIMARY KEY (`account_number`,`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
