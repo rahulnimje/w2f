@@ -1,11 +1,11 @@
    <div class="col-md-9">
-     <span id="question">   {metadata.question} </span>
+     <span id="question">   {metadata.question.en} </span>
      <br>
 
         
             {#metadata.actions}
              <div class="col-md-1" >
-              <button type="submit" class="btn btn-primary response" value="{nextTag}" name="nextRoute">{action}</button>
+              <button type="submit" class="btn btn-primary response" value="{nextTag}" name="nextRoute">{action.en}</button>
              </div>
 
             {/metadata.actions}
