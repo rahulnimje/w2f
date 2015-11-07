@@ -26,7 +26,8 @@ $(document).ready(function () {
 				that.prop("disabled",true);
 				that.parent().siblings().children('.response').prop("disabled",true);
 				that.parent().siblings().children('.response').removeClass('btn-primary').addClass('btn-default').css("background-color","grey");
-
+var areaName = $('#panelarea').val()
+				$("[id='"+areaName +"']") .addClass('active');
 if(that.data("id")=="yes") {
 	console.log(that.parent().siblings("div.resultArrow"));
 	that.closest(".questionTemplate").siblings("div.resultArrow").html('<div class=" col-md-offset-1"><span class="arrow-success-large" data-angle="180" style="transform: rotate(180deg);"></span></div>');

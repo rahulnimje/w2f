@@ -11,7 +11,11 @@ module.exports = function (router) {
 	var model = new IndexModel();
 
 	router.get('/', function (req, res) {
-		res.render('index');
+
+		console.log("all tage json " + JSON.stringify(surveyData.getAllTags()));
+		var allTags={};
+		allTags['tags']=surveyData.getAllTags();
+		res.render('index',allTags);
 	});
 
 	router.post('/createAccount', function (req, res) {
@@ -71,25 +75,27 @@ module.exports = function (router) {
 		// console.log('req.body is ', req.body);
 
 		var language = req.body.language || 'en';
-		var account_number = req.body.account_number;
+		var account_number = req.body.account_number;  // Tejas:  Please pass up the account_number
 
 		// TODO:  if account_number is null or 0, error log
 
 		// gather the metadata for the frontend
 		var survey = surveyData.get(req.query.nextRoute);
 
+
+
 		// also gather the language and account number for the frontend.
 		survey['language'] = language;
 		survey['account_number'] = account_number;
 		survey['all_unique_tags'] = surveyData.getAllTags();
 
-		console.log(survey);
+		console.log(JSON.stringify(survey));
 
 		// console.log('req.query', req.query);
 		var new_account_properties = {
 			account_number: account_number,
-			name: req.query.name || 'UNKNOWN',  // preferably not a query, but in req.body
-			value: req.query.value || 'UNKNOWN'
+			name: req.query.name || 'UNKNOWN',  // Tejas:  Please pass up the name (e.g. 
+			value: req.query.value || 'UNKNOWN'  // Tejas:  Please pass up the value (e.g. yes, no)
 		}
 
 		accountpropertiesDAO.createAccountProperties(new_account_properties, function (return_code) {

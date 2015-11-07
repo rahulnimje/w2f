@@ -21,7 +21,8 @@
     "jsonfile": "^2.2.2",
     "kraken-js": "^1.0.3",
     "makara": "^2.0.3",
-    "mysql": "^2.9.0"
+    "mysql": "^2.9.0",
+    "underscore": "~1.6.0"
   },
   "devDependencies": {
     "mocha": "^1.18.0",
