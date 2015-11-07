@@ -1,6 +1,17 @@
+    {@useContent bundle="questionTemplate.properties"}
 
 <form id="createUser" class = "form-horizontal">
 <input type="hidden" class="form-control" name="_csrf" value="{_csrf}">
+  <div  class = "form-group">
+
+           <label class="col-md-3" for="language" style="display:inline-block"> Language:</label>
+           <select class="form-control" id="language" name="language" required>
+            <option value="en">English</option>
+            <option value="es">Espanol</option>
+            <option value="vn">Viet Nam</option>
+            </select>
+  </div>
+
   <div  class = "form-group">
 
      <label class="col-md-3" style="display:inline"> First Name: </label>
@@ -21,15 +32,6 @@
          <label class="col-md-3" style="display:inline-block"> Password:</label>
          <input type="password" class="form-control" placeholder="Password" name="password" style="display:inline-block" required/>
   </div>
-  <div  class = "form-group">
-
-           <label class="col-md-3" for="language" style="display:inline-block"> Language:</label>
-           <select class="form-control"id = "language" name="{language}" required>
-            <option>English</option>
-            <option>Spanish</option>
-            <option>Vietnamese</option>
-            </select>
-  </div>
 
            <!-- TODO: Change the line below to read jsonfile where action is create  -->
          <input type="hidden" name="nextRoute" value="{metadata.actions[0].jsonFile}">
@@ -38,3 +40,4 @@
   
 
  </form>
+ {/useContent}

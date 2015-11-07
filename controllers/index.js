@@ -25,6 +25,9 @@ module.exports = function (router) {
 		var new_account = { first_name: req.body.firstName, last_name: req.body.lastName, password: req.body.password,
 			'email': req.body.email, language: 'en'  };
 
+		res.locals.locale =  { language: language, country: 'US' };
+
+
 		accountDAO.createAccount(new_account, function (return_code, new_account_number) {
 			console.log('new account number is: ', new_account_number);
 			// gather the metadata for the frontend
@@ -34,12 +37,14 @@ module.exports = function (router) {
 			survey['language'] = language;
 			survey['account_number'] = new_account_number;
 			survey['all_unique_tags'] = surveyData.getAllTags();
-			// console.log(survey);
 
 			res.render('questionTemplate', survey);
+
 		});
 
 	});
+
+
 
 	var returnResult = function (err, response) {
 		console.log(response);
@@ -48,6 +53,7 @@ module.exports = function (router) {
 
 	router.get('/toGetTheFirstQuestion', function (req, res) {
 		console.log("/toGetTheFirstQuestion is called");
+
 
 		var language = req.body.language || 'en';
 		var account_number = req.body.account_number;
@@ -59,7 +65,7 @@ module.exports = function (router) {
 		survey['language'] = language;
 		survey['account_number'] = account_number;
 		survey['all_unique_tags'] = surveyData.getAllTags();
-		console.log(survey);
+
 		res.render(survey.templateName, survey);
 
 
@@ -69,11 +75,13 @@ module.exports = function (router) {
 	router.get('/nextSurvey', function (req, res) {
 		// console.log("/nextSurvey is called");
 		// console.log('req.body is ', req.body);
+		//console.log(req);
 
-		var language = req.body.language || 'en';
+		var language = req.query.language || 'en';
 		var account_number = req.body.account_number;  // Tejas:  Please pass up the account_number
 
 		// TODO:  if account_number is null or 0, error log
+
 
 		// gather the metadata for the frontend
 		var survey = surveyData.get(req.query.nextRoute);
@@ -83,14 +91,15 @@ module.exports = function (router) {
 		survey['account_number'] = account_number;
 		survey['all_unique_tags'] = surveyData.getAllTags();
 
-		console.log(survey);
 
 		// console.log('req.query', req.query);
 		var new_account_properties = {
 			account_number: account_number,
-			name: req.query.name || 'UNKNOWN',  // Tejas:  Please pass up the name (e.g. 
+			name: req.query.name || 'UNKNOWN',  // Tejas:  Please pass up the name (e.g.
 			value: req.query.value || 'UNKNOWN'  // Tejas:  Please pass up the value (e.g. yes, no)
 		}
+
+		// console.log(res);
 
 		accountpropertiesDAO.createAccountProperties(new_account_properties, function (return_code) {
 

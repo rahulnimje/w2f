@@ -42,9 +42,16 @@
 
     "middleware": {
 
+		"locale": {
+			"enabled": true,
+			"priority": 100,
+			"module": {
+				"name": "locale"
+			}
+		},
         
         "makara": {
-            "priority": 100,
+            "priority": 101,
             "enabled": true,
             "module": {
                 "name": "makara",

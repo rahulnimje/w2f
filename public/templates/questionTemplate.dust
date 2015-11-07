@@ -1,12 +1,12 @@
 <div>
+    {@useContent bundle="questionTemplate.properties"}
+
     <div class="row questionTemplate">
-        <span id="question">    {metadata.question.en} </span>
+        <span id="question">    {@pre type="content" key=metadata.question.propertykey /} </span>
         <br>
-
-
             {#metadata.actions}
              <div class=" col-md-offset-1 col-md-1" >
-              <button type="submit" class="btn btn-primary response" value="{nextTag}" name="nextRoute" data-id="{action}">{action.en}</button>
+              <button type="submit" class="btn btn-primary response" value="{nextTag}" name="nextRoute" data-id="{action}">{@pre type="content" key=action.propertykey /}</button>
 
               </div>
 
@@ -16,6 +16,7 @@
         <br>
     <div class= "resultArrow row">
     </div>
+    {/useContent}
 </div>
 
         
