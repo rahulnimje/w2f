@@ -11,7 +11,11 @@ module.exports = function (router) {
 	var model = new IndexModel();
 
 	router.get('/', function (req, res) {
-		res.render('index');
+
+		console.log("all tage json " + JSON.stringify(surveyData.getAllTags()));
+		var allTags={};
+		allTags['tags']=surveyData.getAllTags();
+		res.render('index',allTags);
 	});
 
 	router.post('/createAccount', function (req, res) {
@@ -86,11 +90,12 @@ module.exports = function (router) {
 		// gather the metadata for the frontend
 		var survey = surveyData.get(req.query.nextRoute);
 
+
+
 		// also gather the language and account number for the frontend.
 		survey['language'] = language;
 		survey['account_number'] = account_number;
 		survey['all_unique_tags'] = surveyData.getAllTags();
-
 
 		// console.log('req.query', req.query);
 		var new_account_properties = {

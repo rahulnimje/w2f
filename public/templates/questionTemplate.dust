@@ -3,6 +3,7 @@
 
     <div class="row questionTemplate">
         <span id="question">    {@pre type="content" key=metadata.question.propertykey /} </span>
+         <input type="hidden" id="panelarea" name="area" value="{area}">
         <br>
             {#metadata.actions}
              <div class=" col-md-offset-1 col-md-1" >
