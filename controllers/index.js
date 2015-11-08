@@ -86,11 +86,8 @@ module.exports = function (router) {
 
 		// TODO:  if account_number is null or 0, error log
 
-
 		// gather the metadata for the frontend
 		var survey = surveyData.get(req.query.nextRoute);
-
-
 
 		// also gather the language and account number for the frontend.
 		survey['language'] = language;
