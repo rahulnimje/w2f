@@ -20,7 +20,7 @@ $(document).ready(function () {
 		var that = $(this);
 
 		$.ajax({
-			url:"/nextSurvey?nextRoute="+ this.value,
+			url:"/nextSurvey?nextRoute="+ this.value+"&language="+$(this).data("lang")+"&account_number="+$(this).data("acc"),
 			success:function(result){
 				console.log(that);
 				that.prop("disabled",true);
