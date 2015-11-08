@@ -20,7 +20,7 @@
 		"express": "^4.12.2",
 		"jsonfile": "^2.2.2",
 		"kraken-js": "^1.0.3",
-		"locale": "0.0.20",
+		"locale": "^1.1.8",
 		"makara": "^2.0.3",
 		"mysql": "^2.9.0",
 		"underscore": "~1.6.0"
