@@ -29,9 +29,9 @@ module.exports = function (router) {
 
 		// console.log("/createAccount is called");
 
-		// req.body will have all the form values.
-		// console.log(JSON.stringify(req.body));
-		var language = req.body.language || 'en';
+		var language = req.body.preferred_language || 'en';
+
+		// console.log("req.body: ", req.body);
 
 		var new_account = { first_name: req.body.firstName, last_name: req.body.lastName, password: req.body.password,
 			'email': req.body.email, language: 'en'  };

@@ -4,7 +4,7 @@
   <div  class = "form-group">
 
            <label class="col-md-3" for="language" style="display:inline-block"> Language:</label>
-           <select class="form-control" id="language" name="language" required>
+           <select class="form-control" id="preferred_language" name="preferred_language" required>
             <option value="en">English</option>
             <option value="es">Español</option>
             <option value="vn">Tiếng Việt</option>
