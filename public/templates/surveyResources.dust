@@ -1,5 +1,6 @@
 
   <div>
+   <input type="hidden" id="panelarea" name="area" value="{area}">
 <h3 > Please check out the following resources : </h3>
 
     {#metadata.resources}
