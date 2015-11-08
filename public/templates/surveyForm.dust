@@ -26,11 +26,7 @@
        <label class="col-md-3" style="display:inline-block"> Email:</label>
        <input type="text" class="form-control" placeholder="Email" name="email" style="display:inline-block" required/>
   </div>
-  <div  class = "form-group">
 
-         <label class="col-md-3" style="display:inline-block"> Password:</label>
-         <input type="password" class="form-control" placeholder="Password" name="password" style="display:inline-block" required/>
-  </div>
 
            <!-- TODO: Change the line below to read jsonfile where action is create  -->
          <input type="hidden" name="nextRoute" value="{metadata.actions[0].jsonFile}">

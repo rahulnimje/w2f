@@ -12,6 +12,23 @@ $(document).ready(function () {
 			}
 		});
 
+	$(document).on('change','#language',function(){
+
+		$.ajax({
+			url:"/toGetTheFirstQuestion?language="+$(this).val(),
+			success:function(result){
+				//alert("success");
+				$("#questionHolder").html(result);
+			},
+			error:function(result){
+
+
+			}
+		});
+
+	});
+
+
 
 	$(document).on('click','.response',function(){
 
