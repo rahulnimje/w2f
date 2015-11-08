@@ -81,11 +81,14 @@ module.exports = function (router) {
 		// console.log('req.body is ', req.body);
 		//console.log(req);
 
+
+		console.log(JSON.stringify(req.query));
 		var language = req.query.language || 'en';
-		var account_number = req.body.account_number;  // Tejas:  Please pass up the account_number
+		var account_number = req.query.account_number;  // Tejas:  Please pass up the account_number
 
 		// TODO:  if account_number is null or 0, error log
 
+	console.log("language is : " + language);
 		// gather the metadata for the frontend
 		var survey = surveyData.get(req.query.nextRoute);
 
