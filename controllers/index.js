@@ -59,15 +59,14 @@ module.exports = function (router) {
 		console.log("/toGetTheFirstQuestion is called");
 
 
-		var language = req.body.language || 'en';
-		var account_number = req.body.account_number;
+		// if there is language preferred, use that language
+		var language = req.query.language || 'en';
 
 		// TODO:  if account_number is null or 0, error log
 		var survey = surveyForm.get('basicContactInfo');
 
 		// also gather the language and account number for the frontend.
 		survey['language'] = language;
-		survey['account_number'] = account_number;
 		survey['all_unique_tags'] = surveyData.getAllTags();
 
 		res.render(survey.templateName, survey);
@@ -77,18 +76,17 @@ module.exports = function (router) {
 
 
 	router.get('/nextSurvey', function (req, res) {
-		// console.log("/nextSurvey is called");
-		// console.log('req.body is ', req.body);
-		//console.log(req);
-
 
 		console.log(JSON.stringify(req.query));
 		var language = req.query.language || 'en';
 		var account_number = req.query.account_number;  // Tejas:  Please pass up the account_number
+		var analytic_name = req.query.analytic_name || 'UNKNOWN';
+		var analytic_value = req.query.analytic_value || 'UNKNOWN';
 
-		// TODO:  if account_number is null or 0, error log
 
-	console.log("language is : " + language);
+		// Set the language
+		res.locals.locale =  { language: language, country: 'US' };
+
 		// gather the metadata for the frontend
 		var survey = surveyData.get(req.query.nextRoute);
 
@@ -100,8 +98,8 @@ module.exports = function (router) {
 		// console.log('req.query', req.query);
 		var new_account_properties = {
 			account_number: account_number,
-			name: req.query.name || 'UNKNOWN',  // Tejas:  Please pass up the name (e.g.
-			value: req.query.value || 'UNKNOWN'  // Tejas:  Please pass up the value (e.g. yes, no)
+			name: analytic_name,
+			value: analytic_value
 		}
 
 		// console.log(res);
