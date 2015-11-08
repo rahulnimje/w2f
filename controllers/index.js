@@ -13,8 +13,15 @@ module.exports = function (router) {
 	router.get('/', function (req, res) {
 
 		console.log("all tage json " + JSON.stringify(surveyData.getAllTags()));
+
+		var language = req.query.language || 'en';
+
 		var allTags={};
+
 		allTags['tags']=surveyData.getAllTags();
+		allTags['language'] = language;
+
+		res.locals.locale =  { language: language, country: 'US' };
 		res.render('index',allTags);
 	});
 
@@ -58,6 +65,8 @@ module.exports = function (router) {
 	router.get('/toGetTheFirstQuestion', function (req, res) {
 		console.log("/toGetTheFirstQuestion is called");
 
+		console.log("query is ", req.query);
+
 
 		// if there is language preferred, use that language
 		var language = req.query.language || 'en';
@@ -68,6 +77,8 @@ module.exports = function (router) {
 		// also gather the language and account number for the frontend.
 		survey['language'] = language;
 		survey['all_unique_tags'] = surveyData.getAllTags();
+
+		res.locals.locale =  { language: language, country: 'US' };
 
 		res.render(survey.templateName, survey);
 
