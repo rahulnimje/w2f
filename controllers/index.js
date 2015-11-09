@@ -132,14 +132,16 @@ module.exports = function (router) {
 		}
 
 		// console.log(res);
+		
+		// To avoid delay in rendering the next page, we will save account to database asynchronously
 		accountpropertiesDAO.createAccountProperties(new_account_properties, function (return_code) {
-
-			if (survey.templateName === "surveyResources") {
-				res.render('surveyResources', survey);
-			} else {
-				res.render('questionTemplate', survey);
-			}
 		});
+
+		if (survey.templateName === "surveyResources") {
+			res.render('surveyResources', survey);
+		} else {
+			res.render('questionTemplate', survey);
+		}
 	});
 
 
