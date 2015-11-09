@@ -58,6 +58,7 @@ if(that.data("id")=="yes") {
 
 				var selectedArea = $('li.active').attr('id');
 				var newArea =$(result).find('#panelarea').val();
+				
 				if(newArea !== selectedArea) {
 					var span = $('li.active a').find('span');
 					$(span).css("display","inline")

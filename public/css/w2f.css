@@ -42,7 +42,9 @@
 	vertical-align: center;
 }
 
-
+.green{
+	color:green;
+}
 
 #question{
 	font-size : 20px;
