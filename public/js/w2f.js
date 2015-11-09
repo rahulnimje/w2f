@@ -53,10 +53,17 @@ if(that.data("id")=="yes") {
 }else{
 	that.closest(".questionTemplate").siblings("div.resultArrow").html('<div class=" col-md-offset-3"><span class="arrow-danger-large" data-angle="180" style="transform: rotate(180deg);"></span></div>');
 }
-				$('.panel').removeClass('active');
+
 				$("#questionHolder").append(result);
 
-				$("[id='"+$(result).find('#panelarea').val() +"']").addClass('active');
+				var selectedArea = $('li.active').attr('id');
+				var newArea =$(result).find('#panelarea').val();
+				if(newArea !== selectedArea) {
+					var span = $('li.active a').find('span');
+					$(span).css("display","inline")
+					$('.panel').removeClass('active');
+					$("[id='" + $(result).find('#panelarea').val() + "']").addClass('active');
+				}
 			//	$('.downarrows').css('display', 'block');
 			},
 			error:function(result){

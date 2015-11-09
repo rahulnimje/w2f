@@ -7,7 +7,7 @@
 	<nav class="navbar navbar-default" role="navigation">
 	  <ul class="nav navbar-nav">
 		 {#tags}
-		  <li id="{area}" class="panel"><a href="#">{area}</a></li>
+		  <li id="{area}" class="panel"><a href="#">{area} &nbsp;&nbsp; <span class="glyphicon glyphicon-ok" aria-hidden="true" style="display:none"></span> </a> </li>
 		{/tags}
 		</ul>
 	</nav>

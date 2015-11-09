@@ -7,7 +7,7 @@
         <br>
             {#metadata.actions}
              <div class=" col-md-offset-1 col-md-1" >
-              <button type="submit" class="btn btn-primary response" value="{nextTag}" name="nextRoute" data-id="{action.en}" data-lang="{language}" data-acc="{account_number}" data-analytic_name="{metadata.question.propertykey}" data-analytic_value="{action.propertykey}">{@pre type="content" key=action.propertykey /}</button>
+              <button type="submit" class="btn btn-primary response" value="{nextTag}" name="nextRoute" data-id="{action.propertykey}" data-lang="{language}" data-acc="{account_number}" data-analytic_name="{metadata.question.propertykey}" data-analytic_value="{action.propertykey}">{@pre type="content" key=action.propertykey /}</button>
 
               </div>
 
