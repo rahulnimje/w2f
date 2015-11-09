@@ -38,3 +38,5 @@ CREATE TABLE `accountproperties` (
 Questionairs and Content:
 - All questions and resources routes should be modified in data/surveyData.csv
 - All the corresponding text are localized in locale/US/en/localeMessages.properties, locale/US/es/localeMessages.properties, locale/US/vn/localeMessages.properties
+- Please note that new propertykey added to data/surveyData.csv should also defined in localeMessages.properties file.   Also, propertykey is
+  used in the analytic data (i.e. account_properties table).
