@@ -86,6 +86,8 @@ module.exports = function (router) {
 		// if there is language preferred, use that language
 		var language = req.query.language || 'en';
 
+		console.log("language :"+ language);
+
 		// TODO:  if account_number is null or 0, error log
 		var survey = {};
 		var templateName = "surveyForm";

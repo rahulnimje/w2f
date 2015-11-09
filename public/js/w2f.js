@@ -12,13 +12,15 @@ $(document).ready(function () {
 			}
 		});
 
-	$(document).on('change','#language',function(){
-
+	$(document).on('change','#preferred_language',function(){
+console.log("on change called");
+		var lang =$(this).val();
 		$.ajax({
 			url:"/toGetTheFirstQuestion?language="+$(this).val(),
 			success:function(result){
 				//alert("success");
 				$("#questionHolder").html(result);
+				$('#preferred_language').val(lang);
 			},
 			error:function(result){
 
