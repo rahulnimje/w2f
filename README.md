@@ -35,3 +35,6 @@ CREATE TABLE `accountproperties` (
   PRIMARY KEY (`account_number`,`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+Questionairs and Content:
+- All questions and resources routes should be modified in data/surveyData.csv
+- All the corresponding text are localized in locale/US/en/localeMessages.properties, locale/US/es/localeMessages.properties, locale/US/vn/localeMessages.properties
