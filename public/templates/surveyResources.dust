@@ -1,13 +1,16 @@
+    {@useContent bundle="questionTemplate.properties"}
 
   <div>
    <input type="hidden" id="panelarea" name="area" value="{area}">
 <h3 > Please check out the following resources : </h3>
 
     {#metadata.resources}
-        <a href = "{link}" target="_blank">{text}</a><br>
+        <a href = "{link}" target="_blank">{@pre type="content" key=propertykey /} </a><br>
 
     {/metadata.resources}
   </div>
+
+  {/useContent}
 
 
 

@@ -4,17 +4,28 @@ var IndexModel = require('../models/index');
 var accountDAO = require('../lib/accountDAO');
 var accountpropertiesDAO = require('../lib/accountpropertiesDAO');
 var surveyData = require('../lib/surveyData');
-var surveyForm = require('../lib/surveyForm');
 
 module.exports = function (router) {
 
 	var model = new IndexModel();
-
+	// Root
 	router.get('/', function (req, res) {
+		res.redirect(req.app.kraken.get('requestURI'));
+	});
+
+
+	router.get('/survey', function (req, res) {
 
 		console.log("all tage json " + JSON.stringify(surveyData.getAllTags()));
+
+		var language = req.query.language || 'en';
+
 		var allTags={};
+
 		allTags['tags']=surveyData.getAllTags();
+		allTags['language'] = language;
+
+		res.locals.locale =  { language: language, country: 'US' };
 		res.render('index',allTags);
 	});
 
@@ -22,12 +33,12 @@ module.exports = function (router) {
 
 		// console.log("/createAccount is called");
 
-		// req.body will have all the form values.
-		// console.log(JSON.stringify(req.body));
-		var language = req.body.language || 'en';
+		var language = req.body.preferred_language || 'en';
+
+		// console.log("req.body: ", req.body);
 
 		var new_account = { first_name: req.body.firstName, last_name: req.body.lastName, password: req.body.password,
-			'email': req.body.email, language: 'en'  };
+			'email': req.body.email, language: language  };
 
 		res.locals.locale =  { language: language, country: 'US' };
 
@@ -58,6 +69,8 @@ module.exports = function (router) {
 	router.get('/toGetTheFirstQuestion', function (req, res) {
 		console.log("/toGetTheFirstQuestion is called");
 
+		console.log("query is ", req.query);
+
 
 		// if there is language preferred, use that language
 		var language = req.query.language || 'en';
@@ -65,13 +78,16 @@ module.exports = function (router) {
 		console.log("language :"+ language);
 
 		// TODO:  if account_number is null or 0, error log
-		var survey = surveyForm.get('basicContactInfo');
+		var survey = {};
+		var templateName = "surveyForm";
 
 		// also gather the language and account number for the frontend.
 		survey['language'] = language;
 		survey['all_unique_tags'] = surveyData.getAllTags();
 
-		res.render(survey.templateName, survey);
+		res.locals.locale =  { language: language, country: 'US' };
+
+		res.render(templateName, survey);
 
 
 	});
