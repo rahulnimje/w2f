@@ -132,7 +132,7 @@ module.exports = function (router) {
 		}
 
 		// console.log(res);
-		
+
 		// To avoid delay in rendering the next page, we will save account to database asynchronously
 		accountpropertiesDAO.createAccountProperties(new_account_properties, function (return_code) {
 		});
@@ -142,6 +142,29 @@ module.exports = function (router) {
 		} else {
 			res.render('questionTemplate', survey);
 		}
+	});
+
+	router.get('/add_analytic', function (req, res) {
+		var account_number = req.query.account_number;  // Tejas:  Please pass up the account_number
+		var analytic_name = req.query.analytic_name || 'UNKNOWN';
+		var analytic_value = req.query.analytic_value || 'UNKNOWN';
+
+		var new_account_properties = {
+			account_number: account_number,
+			name: analytic_name,
+			value: analytic_value
+		}
+
+		// console.log(res);
+
+		// To avoid delay in rendering the next page, we will save account to database asynchronously
+		accountpropertiesDAO.createAccountProperties(new_account_properties, function (return_code) {
+		});
+
+		res.status(200).json({
+			added: "success"
+		});
+
 	});
 
 
