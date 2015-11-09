@@ -1,8 +1,8 @@
-    {@useContent bundle="questionTemplate.properties"}
+    {@useContent bundle="localeMessages.properties"}
 
   <div>
    <input type="hidden" id="panelarea" name="area" value="{area}">
-<h3 > Please check out the following resources : </h3>
+    <h3 > {@pre type="content" key="Resources.heading"  /} </h3>
 
     {#metadata.resources}
         <a href = "{link}" target="_blank">{@pre type="content" key=propertykey /} </a><br>

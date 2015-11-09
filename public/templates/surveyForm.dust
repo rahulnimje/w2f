@@ -1,4 +1,4 @@
-    {@useContent bundle="questionTemplate.properties"}
+    {@useContent bundle="localeMessages.properties"}
 
 <form id="createUser" class = "form-horizontal">
     <input type="hidden" class="form-control" name="_csrf" value="{_csrf}">

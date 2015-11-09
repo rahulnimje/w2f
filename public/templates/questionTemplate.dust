@@ -1,5 +1,5 @@
 <div>
-    {@useContent bundle="questionTemplate.properties"}
+    {@useContent bundle="localeMessages.properties"}
 
     <div class="row questionTemplate">
         <span id="question">    {@pre type="content" key=metadata.question.propertykey /} </span>
