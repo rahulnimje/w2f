@@ -4,13 +4,17 @@ var IndexModel = require('../models/index');
 var accountDAO = require('../lib/accountDAO');
 var accountpropertiesDAO = require('../lib/accountpropertiesDAO');
 var surveyData = require('../lib/surveyData');
-var surveyForm = require('../lib/surveyForm');
 
 module.exports = function (router) {
 
 	var model = new IndexModel();
-
+	// Root
 	router.get('/', function (req, res) {
+		res.redirect(req.app.kraken.get('requestURI'));
+	});
+
+
+	router.get('/survey', function (req, res) {
 
 		console.log("all tage json " + JSON.stringify(surveyData.getAllTags()));
 
@@ -34,7 +38,7 @@ module.exports = function (router) {
 		// console.log("req.body: ", req.body);
 
 		var new_account = { first_name: req.body.firstName, last_name: req.body.lastName, password: req.body.password,
-			'email': req.body.email, language: 'en'  };
+			'email': req.body.email, language: language  };
 
 		res.locals.locale =  { language: language, country: 'US' };
 
@@ -72,7 +76,8 @@ module.exports = function (router) {
 		var language = req.query.language || 'en';
 
 		// TODO:  if account_number is null or 0, error log
-		var survey = surveyForm.get('basicContactInfo');
+		var survey = {};
+		var templateName = "surveyForm";
 
 		// also gather the language and account number for the frontend.
 		survey['language'] = language;
@@ -80,7 +85,7 @@ module.exports = function (router) {
 
 		res.locals.locale =  { language: language, country: 'US' };
 
-		res.render(survey.templateName, survey);
+		res.render(templateName, survey);
 
 
 	});
