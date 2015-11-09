@@ -20,13 +20,13 @@ module.exports = function (router) {
 
 		var language = req.query.language || 'en';
 
-		var allTags={};
+		var allTags = {};
 
-		allTags['tags']=surveyData.getAllTags();
+		allTags['tags'] = surveyData.getAllTags();
 		allTags['language'] = language;
 
-		res.locals.locale =  { language: language, country: 'US' };
-		res.render('index',allTags);
+		res.locals.locale = { language: language, country: 'US' };
+		res.render('index', allTags);
 	});
 
 	router.post('/createAccount', function (req, res) {
@@ -36,7 +36,7 @@ module.exports = function (router) {
 		var language = req.body.preferred_language || 'en',
 			firstName = req.body.firstName,
 			lastName = req.body.lastName,
-			email = req.body.lastName;
+			email = req.body.email;
 
 		var skip_create_account = req.query.skip_create_account;
 		if (skip_create_account === 'true') {
@@ -51,8 +51,7 @@ module.exports = function (router) {
 		var new_account = { first_name: firstName, last_name: lastName,
 			email: email, language: language  };
 
-		res.locals.locale =  { language: language, country: 'US' };
-
+		res.locals.locale = { language: language, country: 'US' };
 
 		accountDAO.createAccount(new_account, function (return_code, new_account_number) {
 			console.log('new account number is: ', new_account_number);
@@ -67,9 +66,10 @@ module.exports = function (router) {
 			res.render('questionTemplate', survey);
 
 		});
+		//});
+
 
 	});
-
 
 
 	var returnResult = function (err, response) {
@@ -86,7 +86,7 @@ module.exports = function (router) {
 		// if there is language preferred, use that language
 		var language = req.query.language || 'en';
 
-		console.log("language :"+ language);
+		// console.log("language :" + language);
 
 		// TODO:  if account_number is null or 0, error log
 		var survey = {};
@@ -96,7 +96,7 @@ module.exports = function (router) {
 		survey['language'] = language;
 		survey['all_unique_tags'] = surveyData.getAllTags();
 
-		res.locals.locale =  { language: language, country: 'US' };
+		res.locals.locale = { language: language, country: 'US' };
 
 		res.render(templateName, survey);
 
@@ -114,7 +114,7 @@ module.exports = function (router) {
 
 
 		// Set the language
-		res.locals.locale =  { language: language, country: 'US' };
+		res.locals.locale = { language: language, country: 'US' };
 
 		// gather the metadata for the frontend
 		var survey = surveyData.get(req.query.nextRoute);
@@ -132,7 +132,6 @@ module.exports = function (router) {
 		}
 
 		// console.log(res);
-
 		accountpropertiesDAO.createAccountProperties(new_account_properties, function (return_code) {
 
 			if (survey.templateName === "surveyResources") {
@@ -141,7 +140,6 @@ module.exports = function (router) {
 				res.render('questionTemplate', survey);
 			}
 		});
-
 	});
 
 
