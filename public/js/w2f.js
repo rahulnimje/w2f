@@ -88,4 +88,27 @@ console.log("called called");
 
 		return false;
 	});
+
+	$(document).on('click','#skip',function(){
+
+		console.log("called called");
+		console.log(this.value);
+
+		$.ajax({
+			type:"POST",
+			url:"/createAccount?nextRoute="+ this.value + "&skip_create_account=true",
+			data:$("#createUser").serialize(),
+			success:function(result){
+				//alert("success");
+				$("#questionHolder").html("");
+				$("#questionHolder").append(result);
+			},
+			error:function(result){
+
+
+			}
+		});
+
+		return false;
+	});
 });

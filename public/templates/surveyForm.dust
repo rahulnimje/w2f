@@ -26,7 +26,8 @@
     </div>
 
     <input type="hidden" name="nextRoute" value="currentBusinessStatus">
-
     <button type="submit" class="btn btn-primary" value="currentBusinessStatus" name="nextRoute" id="create">{@pre type="content" key="form.Create" /}</button>
+    <button type="submit" class="btn btn-primary" value="currentBusinessStatus" name="nextRoute" id="skip">{@pre type="content" key="form.Skip" /}</button>
+ 
  </form>
     {/useContent}

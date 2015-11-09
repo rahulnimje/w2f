@@ -16,7 +16,7 @@ module.exports = function (router) {
 
 	router.get('/survey', function (req, res) {
 
-		console.log("all tage json " + JSON.stringify(surveyData.getAllTags()));
+		// console.log("all tage json " + JSON.stringify(surveyData.getAllTags()));
 
 		var language = req.query.language || 'en';
 
@@ -33,12 +33,23 @@ module.exports = function (router) {
 
 		// console.log("/createAccount is called");
 
-		var language = req.body.preferred_language || 'en';
+		var language = req.body.preferred_language || 'en',
+			firstName = req.body.firstName,
+			lastName = req.body.lastName,
+			email = req.body.lastName;
 
-		// console.log("req.body: ", req.body);
+		var skip_create_account = req.query.skip_create_account;
+		if (skip_create_account === 'true') {
+			firstName = 'GUEST';
+			lastName = 'GUEST';
+			email = 'UNKNOWN';
+		}
 
-		var new_account = { first_name: req.body.firstName, last_name: req.body.lastName, password: req.body.password,
-			'email': req.body.email, language: language  };
+
+		//console.log("req.body: ", req.body);
+
+		var new_account = { first_name: firstName, last_name: lastName,
+			email: email, language: language  };
 
 		res.locals.locale =  { language: language, country: 'US' };
 
@@ -67,9 +78,9 @@ module.exports = function (router) {
 	}
 
 	router.get('/toGetTheFirstQuestion', function (req, res) {
-		console.log("/toGetTheFirstQuestion is called");
+		//console.log("/toGetTheFirstQuestion is called");
 
-		console.log("query is ", req.query);
+		//console.log("query is ", req.query);
 
 
 		// if there is language preferred, use that language
