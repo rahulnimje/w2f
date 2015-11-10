@@ -27,7 +27,7 @@
 
     <input type="hidden" name="nextRoute" value="currentBusinessStatus">
     <button type="submit" class="btn btn-success" value="currentBusinessStatus" name="nextRoute" id="create">{@pre type="content" key="form.Create" /}</button>
-    &nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-danger" value="currentBusinessStatus" name="nextRoute" id="skip">{@pre type="content" key="form.Skip" /}</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn" value="currentBusinessStatus" name="nextRoute" id="skip" style="background-color:grey">{@pre type="content" key="form.Skip" /}</button>
  
  </form>
     {/useContent}
