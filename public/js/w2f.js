@@ -1,5 +1,15 @@
 $(document).ready(function () {
 
+	$(document).ajaxStart(function() {
+
+		$("#loading").show();
+	});
+
+	$(document).ajaxComplete(function() {
+		$("#loading").hide();
+	});
+
+
 	$.ajax({
 		url:"/toGetTheFirstQuestion",
 		success:function(result){
@@ -14,6 +24,8 @@ $(document).ready(function () {
 	});
 
 	$(document).on('change','#preferred_language',function(){
+
+		//$(location).attr('href', 'http://stackoverflow.com')
 		console.log("on change called");
 		var lang =$(this).val();
 		$.ajax({
