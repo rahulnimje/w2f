@@ -1,4 +1,4 @@
-    {@useContent bundle="localeMessages.properties"}
+{@useContent bundle="localeMessages.properties"}
 
   <div>
    <input type="hidden" id="panelarea" name="area" value="{area}">
@@ -10,7 +10,7 @@
     {/metadata.resources}
   </div>
 
-  {/useContent}
+{/useContent}
 
 
 

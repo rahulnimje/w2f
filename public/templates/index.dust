@@ -1,6 +1,7 @@
 {>"layouts/master" /}
 
 {<body}
+    {@useContent bundle="localeMessages.properties"}
 <div class="container-fluid" style="padding-top:5%;padding-left:5%;padding-bottom:5%;padding-right:5%;border: 2px solid black;margin:5px; border-radius:6px">
  <input type="hidden" id="currentLang" name="currentLang" value="en">
   <input type="hidden" id="accNum" name="accNum">
@@ -9,7 +10,7 @@
 	<nav class="navbar navbar-default" role="navigation">
 	  <ul class="nav navbar-nav">
 		 {#tags}
-		  <li id="{area}" data-question="{firstTag}" class="panel"><a href="#">{area} &nbsp;&nbsp; <span class="glyphicon glyphicon-ok green" aria-hidden="true" style="display:none"></span> </a> </li>
+		  <li id="{area}" data-question="{firstTag}" class="panel"><a href="#">{@pre type="content" key=area /}  &nbsp;&nbsp; <span class="glyphicon glyphicon-ok green" aria-hidden="true" style="display:none"></span> </a> </li>
 		{/tags}
 		</ul>
 	</nav>
@@ -22,8 +23,9 @@
 
     </div>
 </div>
-
 </div>
+{/useContent}
+
    <script src="./components/jquery/dist/jquery.min.js"></script>
     <script src="./components/bootstrap/dist/js/bootstrap.min.js"></script>
                   <script src="./components/bootstrap/dist/js/bootstrap-arrows.js"></script>
@@ -31,3 +33,4 @@
 
 
 {/body}
+
