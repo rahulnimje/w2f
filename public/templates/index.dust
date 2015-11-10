@@ -26,11 +26,14 @@
 </div>
 {/useContent}
 
+ <div id="loading" class="hideComponents">
+         <img id="loading-image" src="./components/img/325.GIF" alt="waiting..."/>
+      </div>
+
+      {/body}
+
    <script src="./components/jquery/dist/jquery.min.js"></script>
     <script src="./components/bootstrap/dist/js/bootstrap.min.js"></script>
                   <script src="./components/bootstrap/dist/js/bootstrap-arrows.js"></script>
            <script src="./js/w2f.js"></script>
-
-
-{/body}
 
