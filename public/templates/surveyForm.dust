@@ -14,20 +14,20 @@
 
     <div  class = "form-group">
         <label class="col-md-3" style="display:inline"> {@pre type="content" key="form.FirstName" /} </label>
-        <input type="text" class="form-control" placeholder="First Name" name="firstName" style="display:inline" required/>
+        <input type="text" class="form-control" placeholder="{@pre type="content" key="form.FirstName" /}"  name="firstName" style="display:inline" required/>
     </div>
     <div  class = "form-group">
         <label class="col-md-3" style="display:inline-block"> {@pre type="content" key="form.LastName" /} </label>
-        <input type="text" class="form-control"  placeholder="Last Name" name="lastName" style="display:inline-block" required/>
+        <input type="text" class="form-control"  placeholder="{@pre type="content" key="form.LastName" /}" name="lastName" style="display:inline-block" required/>
     </div>
     <div  class = "form-group">
         <label class="col-md-3" style="display:inline-block"> {@pre type="content" key="form.Email" /} </label>
-        <input type="text" class="form-control" placeholder="Email" name="email" style="display:inline-block" required/>
+        <input type="text" class="form-control" placeholder="{@pre type="content" key="form.Email" /}" name="email" style="display:inline-block" required/>
     </div>
 
     <input type="hidden" name="nextRoute" value="currentBusinessStatus">
     <button type="submit" class="btn btn-success" value="currentBusinessStatus" name="nextRoute" id="create">{@pre type="content" key="form.Create" /}</button>
-    &nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn" value="currentBusinessStatus" name="nextRoute" id="skip" style="background-color:grey">{@pre type="content" key="form.Skip" /}</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn" value="currentBusinessStatus" name="nextRoute" id="skip" style="background-color:LightGrey">{@pre type="content" key="form.Skip" /}</button>
  
  </form>
     {/useContent}
